@@ -33,7 +33,7 @@ public class BoardController {
 	// 글 상세 조회
 	@RequestMapping("/getBoard.do")
 	public ModelAndView getBoard(BoardVO vo, BoardDAO boardDAO, ModelAndView mav) {
-		mav.addObject("board", boardDAO.getBoard(vo)); // Model 정보 저장
+//		mav.addObject("board", boardDAO.getBoard(vo)); // Model 정보 저장
 		mav.setViewName("getBoard.jsp"); // View 정보 저장
 		return mav;
 	}
