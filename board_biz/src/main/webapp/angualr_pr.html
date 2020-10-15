@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+</head>
+<body>
+
+1. board 데이터 session 에 저장 하기 
+
+
+
+
+<script>
+angular
+.module('Watami')	
+.controller('myCtrl', myCtrl)
+
+function MyCtrl($http,$scope) {
+    var params = null;
+    vm.data_json=
+    var service={
+	getBoardData:getBoardData
+	
+    };
+    return serivce;
+    
+    function getBoardData() {
+        $log.debug("magokoroContractService - getMagokoroHistoryList");
+        cfpLoadingBar.start();
+        var req = {
+            method: 'GET',
+            url: './getBoard.do',
+            dataType: 'json',
+            headers: {
+                'Content-Type': 'application/json; charset=utf-8'
+            },
+            params: queryParams,
+        };
+        return $http(req);
+    }
+    
+
+}
+</script>
+
+
+</body>
+</html>

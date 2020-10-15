@@ -28,7 +28,7 @@ public class BoardDAOSpring {
 	// CRUD 기능의 메소드 구현
 	// 글 등록
 	public void insertBoard(BoardVO vo) {
-		System.out.println("===> Spring JDBC로 insertBoard() 기능 처리");
+		System.out.println("===> Spring JDBC로 insertBoard(1) 기능 처리");
 		jdbcTemplate.update(BOARD_INSERT, vo.getSeq(), vo.getTitle(), vo.getWriter(), vo.getContent());
 	}
 
@@ -46,7 +46,7 @@ public class BoardDAOSpring {
 
 	// 글 상세 조회
 	public BoardVO getBoard(BoardVO vo) {
-		System.out.println("===> Spring JDBC로 getBoard() 기능 처리");
+		System.out.println("===> Spring JDBC로 getBoard(1) 기능 처리");
 		Object[] args = { vo.getSeq() };
 		return jdbcTemplate.queryForObject(BOARD_GET, args, new BoardRowMapper());
 	}
